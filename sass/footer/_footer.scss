@@ -1,0 +1,28 @@
+footer {
+    padding-top: 1px;
+    background-color: rgb(1, 27, 46);
+    color: $colFont-light;
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        .footer-column {
+            flex-basis: 270px;
+            margin: 10px;
+            a {
+                display: inline-block;
+                color: #00adff;
+                line-height: 0;
+            }
+            .icon-vk {
+                font-size: 1.65rem;
+                transition: .3s;
+                &:hover {
+                    color: $colMFour;
+                }
+            }
+        }
+    
+    }
+}
