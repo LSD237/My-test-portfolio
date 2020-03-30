@@ -1,38 +1,39 @@
-/* Исправить font-size на общий-регулируемый https://habr.com/ru/post/280125/*/
-/* Вывести класс для кнопок. и добавить :active "нажатие" */
-/* Увеличить поле ввода сообщения и увеличить его при фокусе */
+@charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* body {
-    font-size: 16px;
-} */
+
 .container {
-    max-width: 1600px;
-    margin: 0 auto;
+  max-width: 1600px;
+  margin: 0 auto;
 }
+
 main {
-    background-color: #5995DD;
+  background-color: #5995DD;
 }
+
 .img-responsive {
-    display: inline-block;
-    max-width: 100%;
+  display: inline-block;
+  max-width: 100%;
 }
+
 .icon {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
+
 h1, h2, h3, h4, h5, h6, p {
-    line-height: 1.4;
+  line-height: 1.4;
 }
+
 /* a11y подсветка фокуса */
 header a:focus,
 .section-home article a:focus,
@@ -41,560 +42,541 @@ header a:focus,
 .section-portfolio .container .discription button:focus,
 .section-portfolio .container .set-of-works a:focus,
 .section-application-fomr .container article button:focus {
-    outline-color: #ff009c;
-}
-/* ******************************************* header ***************************************** */
-header {
-    width: 100%;
-    background-color: #D7DDE2;
+  outline-color: #ff009c;
 }
 
+header {
+  width: 100%;
+  background-color: #D7DDE2;
+}
 header nav {
-    max-width: 1600px;
-    margin: 0 auto;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 header ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 header img {
-    height: 50px;
-    border-radius: 5px;
+  height: 50px;
+  border-radius: 5px;
 }
 header li {
-    list-style-type: none;
-    display: inline-block;
+  list-style-type: none;
+  display: inline-block;
 }
 header a {
-    display: inline-block;
-    text-decoration: none;
-    color: #1E3D6B;
-    /* font-size: 23px; */
-    font-size: 1.6rem;
-    padding: 10px 20px;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    margin: 10px 0;
-    transition: .3s;
+  display: inline-block;
+  text-decoration: none;
+  color: #1E3D6B;
+  font-size: 1.6rem;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin: 10px 0;
+  transition: 0.3s;
 }
 header a:hover {
-    border: 2px solid #1E3D6B;
+  border: 2px solid #1E3D6B;
 }
-/* ********************************************** Выпадашка (моб-меню) ******************************************* */
 header .wrapperMobNav {
-    display: none;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: space-around;
 }
-header .navMobile {
-    display: none;
-    position: relative;
-    width: 50px;
+header .wrapperMobNav .navMobile {
+  display: none;
+  position: relative;
+  width: 50px;
 }
-header .navMobile .icon-menu {
-    cursor: pointer;
-    transition: .3s;
-    font-size: 50px;
+header .wrapperMobNav .navMobile .icon-menu {
+  font-size: 50px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-header .ulMobile {
-    display: none;
+header .wrapperMobNav .navMobile .icon-menu:hover {
+  color: #6500a0;
 }
-header .ulMobile li {
-    margin: 0 5px;
+header .wrapperMobNav .navMobile .ulMobile {
+  display: none;
 }
-header .navMobile:hover .ulMobile {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    z-index: 2;
-    display: flex;
-    flex-flow: column nowrap;
-    background-color: #D7DDE2;
-    border: 2px solid #1E3D6B;
-    border-radius: 5px;
+header .wrapperMobNav .navMobile .ulMobile li {
+  margin: 0 5px;
 }
-header .navMobile .icon-menu:hover {
-    color: rgb(101, 0, 160);
+header .wrapperMobNav .navMobile:hover .ulMobile {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #D7DDE2;
+  border: 2px solid #1E3D6B;
+  border-radius: 5px;
 }
-/* ******************************************** (top) home section ********************************************* */
+
 .section-home .container {
-    background-color: #2C5E9E;
-    border-top: 1px solid #2C5E9E;
-    position: relative;
-    padding-bottom: 1px;
+  background-color: #2C5E9E;
+  border-top: 1px solid #2C5E9E;
+  position: relative;
+  padding-bottom: 1px;
 }
-.section-home article {
-    margin: 15% 15% 20%;
-    color: #F6F8F8;
+.section-home .container article {
+  margin: 15% 15% 20%;
+  color: #F6F8F8;
 }
-.section-home article h1 {
-    /* font-size: 50px; */
-    /* font-size: 5.2vmin; */
-    font-size: 3rem;
+.section-home .container article h1 {
+  font-size: 3rem;
 }
-.section-home article p {
-    /* font-size: 23px; */
-    /* font-size: 2.4vmin; */
-    font-size: 1.6rem;
-    margin: 15px 0 25px 0;
+.section-home .container article p {
+  font-size: 1.6rem;
+  margin: 15px 0 25px 0;
 }
-.section-home article > a {
-    display: inline-block;
-    text-decoration: none;
-    /* padding: 15px 35px; */
-    /* padding: 1.55vmin 3.65vmin; */
-    padding: 0.75em 1.75em;
-    border-radius: 20px;
-    background-color: #1E3D6B;
-    color: #F6F8F8;
-    /* font-size: 20px; */
-    /* font-size: 2.1vmin; */
-    font-size: 1.3rem;
-    transition: .3s;
+.section-home .container article > a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #F6F8F8;
+  background-color: #1E3D6B;
+  padding: 0.75em 1.75em;
+  border-radius: 20px;
+  transition: 0.3s;
 }
-.section-home article > a:hover {
-    background-color: #2EE59D;
-    color: black;
-    box-shadow: 0 15px 20px rgba(46,229,157,.4);
-    transform: translateY(-7px) scale(1.05);
+.section-home .container article > a:hover {
+  background-color: #2EE59D;
+  color: black;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px) scale(1.05);
 }
-.section-home article .social {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: 2% 3% 2%;
-    /* color: rgb(12, 43, 90); */
+.section-home .container article .social {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 2% 3% 2%;
 }
-.section-home article .social a {
-    display: inline-block;
-    color: black;
-    line-height: 0;
+.section-home .container article .social a {
+  display: inline-block;
+  color: black;
+  line-height: 0;
 }
-.section-home article .social .icon-vk {
-    /* font-size: 6vmin; */
-    font-size: 3.65rem;
-    transition: .3s;
+.section-home .container article .social a .icon-vk {
+  font-size: 3.65rem;
+  transition: 0.3s;
 }
-.section-home .social .icon-vk:hover {
-    color: rgb(255, 196, 0);
+.section-home .container article .social a .icon-vk:hover {
+  color: #ffc400;
 }
+
 /* ************************************************** About me ************************************ */
 .section-about .container {
-    background-color: #5995DD;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
+  background-color: #5995DD;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
-.section-about .my-photo-about {
-    flex-basis: 40%;
+.section-about .container .my-photo-about {
+  flex-basis: 40%;
 }
-.section-about article {
-    flex-basis: 45%;
+.section-about .container .my-photo-about img {
+  margin: 10px 0;
+  border-radius: 10px;
 }
-.section-about .my-photo-about img {
-    margin: 10px 0;
-    border-radius: 10px;
+.section-about .container article {
+  flex-basis: 45%;
 }
-.section-about article .h2-first {
-    /* font-size: 45px; */
-    /* font-size: 4.65vmin; */
-    font-size: 3rem;
-    color: #132b4f;
+.section-about .container article .h2-first {
+  font-size: 3rem;
+  color: #132b4f;
 }
-.section-about article h3 {
-    /* font-size: 35px; */
-    /* font-size: 3.5vmin; */
-    font-size: 2.1rem;
-    color: #132b4f;
+.section-about .container article h3 {
+  font-size: 2.1rem;
+  color: #132b4f;
 }
-.section-about article p {
-    /* font-size: 25px; */
-    /* font-size: 2.6vmin; */
-    font-size: 1.6rem;
-    margin: 0.5em 0;
+.section-about .container article p {
+  font-size: 1.6rem;
+  margin: 0.5em 0;
 }
-.section-about .container-img-about {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    margin: 5% 0;
+.section-about .container article .container-img-about {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 5% 0;
 }
-.section-about .container-img-about figure {
-    text-align: center;
+.section-about .container article .container-img-about figure {
+  text-align: center;
 }
-.section-about .container-img-about .figure-second {
-    margin: 0 10px;
+.section-about .container article .container-img-about figure figcaption {
+  font-size: 1.6rem;
+  margin-bottom: 0.5em;
 }
-.section-about .container-img-about figure figcaption {
-    /* font-size: 25px; */
-    /* font-size: 2.6vmin; */
-    font-size: 1.6rem;
-    margin-bottom: 0.5em;
+.section-about .container article .container-img-about figure img {
+  max-height: 150px;
 }
-.section-about .container-img-about figure img {
-    max-height: 150px;
+.section-about .container article .container-img-about .figure-second {
+  margin: 0 10px;
 }
-.section-about article a {
-    display: inline-block;
-    text-decoration: none;
-    /* padding: 15px 35px; */
-    /* padding: 1.55vmin 3.65vmin; */
-    padding: 0.75em 1.75em;
-    border-radius: 20px;
-    background-color: #1E3D6B;
-    color: #F6F8F8;
-    /* font-size: 18px; */
-    /* font-size: 1.85vmin; */
-    font-size: 1.3rem;
-    transition: .3s;
+.section-about .container article a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #F6F8F8;
+  background-color: #1E3D6B;
+  padding: 0.75em 1.75em;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.section-about .container article a:hover {
+  background-color: #2EE59D;
+  color: black;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px) scale(1.05);
 }
 
-.section-about article a:hover {
-    background-color: #2EE59D;
-    color: black;
-    box-shadow: 0 15px 20px rgba(46,229,157,.4);
-    transform: translateY(-7px) scale(1.05);
-}
 /* ****************************************** section happy *************************************** */
 .section-happy {
-    max-width: 1600px;
-    margin: 0 auto;
-    background-image: url(images/backgrounds/hands.jpg);
-    /* ? Почему-то перестал отображаться фон, в отладчике пишет, что файл не найден */
-    background-size: cover;
-    background-position: center center;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-image: url(images/backgrounds/hands.jpg);
+  /* ? Почему-то перестал отображаться фон, в отладчике пишет, что файл не найден */
+  background-size: cover;
+  background-position: center center;
 }
 .section-happy .container {
-    background-color: rgba(30, 61, 107, 0.795);
-    text-align: center;
-    padding-top: 1px;
+  /* Создает фильтр для фото на bg */
+  background-color: rgba(30, 61, 107, 0.8);
+  text-align: center;
+  padding-top: 1px;
 }
 .section-happy .container h2 {
-    /* font-size: 42px; */
-    /* font-size: 4.3vmin; */
-    font-size: 2.6rem;
-    color: #F6F8F8;
-    margin: 4% 0 1%;
+  font-size: 2.6rem;
+  color: #F6F8F8;
+  margin: 4% 0 1%;
 }
 .section-happy .container a {
-    display: inline-block;
-    padding: 1.25em 4em;
-    border: 1px solid #F6F8F8;
-    border-radius: 10px;
-    margin: 2em 3em;
+  display: inline-block;
+  padding: 1.25em 4em;
+  border: 1px solid #F6F8F8;
+  border-radius: 10px;
+  margin: 2em 3em;
 }
-/* ***************************************** section Portfolio ***************************************** */
 
+/* ***************************************** section Portfolio ***************************************** */
 .section-portfolio .container {
-    background-color: #1E3D6B;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #1E3D6B;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .section-portfolio .container .discription {
-    background-color: rgb(255, 196, 0);
-    color: #132b4f;
-    flex-basis: 30%;
+  background-color: #ffc400;
+  color: #132b4f;
+  flex-basis: 30%;
 }
 .section-portfolio .container .discription h2 {
-    /* font-size: 40px; */
-    font-size: 2.6rem;
-    margin: 30% 1.5rem 10px;
+  font-size: 2.6rem;
+  margin: 30% 1.5rem 10px;
 }
 .section-portfolio .container .discription p {
-    font-size: 1.3rem;
-    /* max-width: 350px; */
-    margin: 3% 1.5rem 1%;
+  font-size: 1.3rem;
+  margin: 3% 1.5rem 1%;
 }
 .section-portfolio .container .discription button {
-    /* display: inline-block; */
-    /* text-decoration: none; */
-    font-size: 1.3rem;
-    background-color: rgb(255, 196, 0);
-    border: none;
-    margin: 25px 30px 30%;
+  font-size: 1.3rem;
+  background-color: #ffc400;
+  border: none;
+  margin: 25px 30px 30%;
+  cursor: pointer;
 }
 .section-portfolio .container .set-of-works {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin: 1rem 0;
-    flex-basis: 70%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+  flex-basis: 70%;
 }
 .section-portfolio .container .set-of-works a {
-    flex-basis: 250px;
-    margin: 20px 20px;
+  flex-basis: 250px;
+  margin: 20px 20px;
 }
 .section-portfolio .container .set-of-works .battonSeeMore {
-    font-size: 1.3rem;
-    color: #F6F8F8;
-    background-color: #2C5E9E;
-    text-decoration: none;
-    /* padding: 15px 35px; */
-    padding: 0.75em 1.75em;
-    border: 1px solid #5995DD;
-    border-radius: 20px;
-    text-align: center;
-    transition: .3s;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #F6F8F8;
+  background-color: #2C5E9E;
+  padding: 0.75em 1.75em;
+  border: 1px solid #5995DD;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s;
 }
 .section-portfolio .container .set-of-works .battonSeeMore:hover {
-    background-color: #2EE59D;
-    color: black;
-    border: 1px solid rgb(0, 255, 13);
-    box-shadow: 0 15px 20px rgba(46,229,157,.4);
-    transform: translateY(-7px) scale(1.05);
+  background-color: #2EE59D;
+  color: black;
+  border: 1px solid #00ff0d;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px) scale(1.05);
 }
+
 /* ********************************************** Application (Let's work?) ******************************** */
 .section-application-fomr .container {
-    text-align: center;
+  text-align: center;
 }
 .section-application-fomr .container article {
-    max-width: 940px;
-    margin: 0 auto;
-    padding-bottom: 1px;
+  max-width: 940px;
+  margin: 0 auto;
+  padding-bottom: 1px;
 }
 .section-application-fomr .container article h2 {
-    margin: 5%;
-    /* font-size: 35px; */
-    font-size: 2.6rem;
-    color: #132b4f;
+  margin: 5%;
+  font-size: 2.6rem;
+  color: #132b4f;
 }
 .section-application-fomr .container article form {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin-bottom: 5%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-bottom: 5%;
 }
 .section-application-fomr .container article form label {
-    /* font-size: 18px; */
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 .section-application-fomr .container article form input {
-    font-size: 1.3rem;
-    margin: 10px;
-    padding: 5px 10px;
-    border: 1px solid rgb(3, 28, 65);
-    border-radius: 5px;
-    background-color: #D7DDE2;
+  font-size: 1.3rem;
+  margin: 10px;
+  padding: 5px 10px;
+  border: 1px solid #1E3D6B;
+  border-radius: 5px;
+  background-color: #D7DDE2;
 }
 .section-application-fomr .container article form input:focus {
-    box-shadow: 0 0 3pt 2pt #004a92;
+  box-shadow: 0 0 3pt 2pt #004a92;
 }
 .section-application-fomr .container article button {
-    display: inline-block;
-    font-family: "Times New Roman";
-    font-size: 1.3rem;
-    border: none;
-    cursor: pointer;
-    /* padding: 15px 35px; */
-    padding: 0.75em 1.75em;
-    border-radius: 20px;
-    background-color: #1E3D6B;
-    color: #F6F8F8;
-    margin-bottom: 20px;
-    transition: .3s;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #F6F8F8;
+  background-color: #1E3D6B;
+  padding: 0.75em 1.75em;
+  font-family: "Times New Roman";
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  transition: 0.3s;
 }
 .section-application-fomr .container article button:hover {
-    background-color: #2EE59D;
-    color: black;
-    box-shadow: 0 15px 20px rgba(46,229,157,.4);
-    transform: translateY(-7px) scale(1.05);
+  background-color: #2EE59D;
+  color: black;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px) scale(1.05);
 }
-/* ********************************************* Footer ***************************************** */
+
 footer {
-    padding-top: 1px;
-    background-color: rgb(1, 27, 46);
-    color: #F6F8F8;
+  padding-top: 1px;
+  background-color: #011b2e;
+  color: #F6F8F8;
 }
 footer .container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 footer .container .footer-column {
-    flex-basis: 270px;
-    margin: 10px;
+  flex-basis: 270px;
+  margin: 10px;
 }
 footer .container .footer-column a {
-    display: inline-block;
-    color: #00adff;
-    line-height: 0;
+  display: inline-block;
+  color: #00adff;
+  line-height: 0;
 }
 footer .container .footer-column .icon-vk {
-    /* font-size: 25px; */
-    font-size: 1.65rem;
-    transition: .3s;
+  font-size: 1.65rem;
+  transition: 0.3s;
 }
 footer .container .footer-column .icon-vk:hover {
-    color: rgb(255, 196, 0);
+  color: #ffc400;
 }
+
 /* ************************************************************* Медиа */
 @media (max-width: 980px) {
-    .section-home article h1 {
-        font-size: 2.6rem;
-    }
-    .section-home article p {
-        font-size: 1.3rem;
-    }
-    .section-home article > a {
-        font-size: 1rem;
-    }
-    .section-home article .social .icon-vk {
-        font-size: 2.65rem;
-    }
-    /* ************************* */
-    .section-about article .h2-first {
-        font-size: 2.6rem;
-    }
-    .section-about article p {
-        font-size: 1.3rem;
-        margin: 0 0 0.5em 0;
-    }
-    .section-about article h3 {
-        font-size: 1.85rem;
-    }
-    .section-about .container-img-about {
-        margin: 0.5em 0 1em 0;
-    }
-    .section-about .container-img-about figure figcaption {
-        font-size: 1.3rem;
-    }
-    .section-about article a {
-        font-size: 1rem;
-    }
-    /* ************************** */
-    .section-happy .container h2 {
-        font-size: 2.1rem;
-    }
-    /* ************************** */
-    .section-portfolio .container .discription {
-        flex-basis: 50%;
-    }
-    .section-portfolio .container .set-of-works {
-        flex-basis: 50%;
-    }
-    .section-portfolio .container .discription h2 {
-        font-size: 2.1rem;
-    }
-    .section-portfolio .container .discription p {
-        font-size: 1rem;
-    }
-    .section-portfolio .container .discription button {
-        font-size: 1rem;
-    }
-    .section-portfolio .container .set-of-works .battonSeeMore {
-        font-size: 1rem;
-    }
-    .section-portfolio .container .set-of-works a {
-        flex-basis: 150px;
-        margin: 10px;
-    }
-    /* ************************** */
-    .section-application-fomr .container article h2 {
-        font-size: 2.1rem;
-    }
-    .section-application-fomr .container article form label {
-        font-size: 1rem;
-    }
-    .section-application-fomr .container article form input {
-        font-size: 1rem;
-    }
-    .section-application-fomr .container article button {
-        font-size: 1rem;
-    }
+  .section-home .container article h1 {
+    font-size: 2.6rem;
+  }
+  .section-home .container article p {
+    font-size: 1.3rem;
+  }
+  .section-home .container article > a {
+    font-size: 1rem;
+  }
+  .section-home .container article .social a .icon-vk {
+    font-size: 2.65rem;
+  }
+
+  /* ************************* */
+  .section-about .container article .h2-first {
+    font-size: 2.6rem;
+  }
+  .section-about .container article p {
+    font-size: 1.3rem;
+    margin: 0 0 0.5em 0;
+  }
+  .section-about .container article h3 {
+    font-size: 1.85rem;
+  }
+  .section-about .container article .container-img-about {
+    margin: 0.5em 0 1em 0;
+  }
+  .section-about .container article .container-img-about figure figcaption {
+    font-size: 1.3rem;
+  }
+  .section-about .container article a {
+    font-size: 1rem;
+  }
+
+  /* ************************** */
+  .section-happy .container h2 {
+    font-size: 2.1rem;
+  }
+
+  /* ************************** */
+  .section-portfolio .container .discription {
+    flex-basis: 50%;
+  }
+  .section-portfolio .container .discription h2 {
+    font-size: 2.1rem;
+  }
+  .section-portfolio .container .discription p {
+    font-size: 1rem;
+  }
+  .section-portfolio .container .discription button {
+    font-size: 1rem;
+  }
+
+  .section-portfolio .container .set-of-works {
+    flex-basis: 50%;
+  }
+  .section-portfolio .container .set-of-works a {
+    flex-basis: 150px;
+    margin: 10px;
+  }
+  .section-portfolio .container .set-of-works .battonSeeMore {
+    font-size: 1rem;
+  }
+
+  /* ************************** */
+  .section-application-fomr .container article h2 {
+    font-size: 2.1rem;
+  }
+  .section-application-fomr .container article form label {
+    font-size: 1rem;
+  }
+  .section-application-fomr .container article form input {
+    font-size: 1rem;
+  }
+  .section-application-fomr .container article button {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 768px) {
-    .section-about .my-photo-about {
-        display: none;
-    }
-    .section-about article {
-        flex-basis: 90%;
-        margin: 1em 0;
-        text-align: center;
-    }
+  .section-about .container .my-photo-about {
+    display: none;
+  }
+  .section-about .container article {
+    flex-basis: 90%;
+    margin: 1em 0;
+    text-align: center;
+  }
 }
-@media (max-width:580px) {
-    header nav {
-        display: none;
-    }
-    header nav {
-        margin: 0;
-    }
-    header .wrapperMobNav {
-        display: flex;
-    }
-    header .navMobile {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-    header img {
-        margin: 10px 0;
-    }
+@media (max-width: 580px) {
+  header nav {
+    display: none;
+    margin: 0;
+  }
+  header .wrapperMobNav {
+    display: flex;
+  }
+  header .wrapperMobNav .navMobile {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  header .wrapperMobNav img {
+    margin: 10px 0;
+  }
 }
 @media (max-width: 480px) {
-    header img {
-        height: 35px;
-    }
-    header .navMobile .icon-menu {
-        font-size: 35px;
-    }
-    header .navMobile:hover .ulMobile {
-        top: 45px;
-    }
-    .section-home article h1 {
-        font-size: 2.1rem;
-    }
-    .section-home article p {
-        font-size: 1rem;
-    }
-    .section-home article > a {
-        font-size: 0.8rem;
-    }
-    .section-home article .social .icon-vk {
-        font-size: 1.65rem;
-    }
-    /* ********************** */
-    .section-about article .h2-first {
-        font-size: 2.1rem;
-    }
-    .section-about article p {
-        font-size: 1rem;
-    }
-    .section-about article h3 {
-        font-size: 1.5rem;
-    }
-    .section-about .container-img-about figure figcaption {
-        font-size: 1rem;
-    }
-    .section-about article a {
-        font-size: 0.8rem;
-    }
-    /* ********************** */
-    .section-portfolio .container {
-        flex-flow: column nowrap;
-    }
-    .section-portfolio .container .set-of-works .battonSeeMore {
-        font-size: 0.8rem;
-    }
-    .section-portfolio .container .discription {
-        text-align: center;
-    }
-    .section-portfolio .container .discription h2 {
-        margin: 1.5rem 1.5rem 10px;
-    }
-    .section-portfolio .container .discription button {
-        margin: 0.5rem 30px 1.5rem;
-    }
-    /* ******************** */
-    .section-application-fomr .container article button {
-        font-size: 0.8rem;
-    }
+  header .wrapperMobNav img {
+    height: 35px;
+  }
+  header .wrapperMobNav .navMobile .icon-menu {
+    font-size: 35px;
+  }
+  header .wrapperMobNav .navMobile:hover .ulMobile {
+    top: 45px;
+  }
+
+  /* ********************** */
+  .section-home .container article h1 {
+    font-size: 2.1rem;
+  }
+  .section-home .container article p {
+    font-size: 1rem;
+  }
+  .section-home .container article > a {
+    font-size: 0.8rem;
+  }
+  .section-home .container article .social a .icon-vk {
+    font-size: 1.65rem;
+  }
+
+  /* ********************** */
+  .section-about .container article .h2-first {
+    font-size: 2.1rem;
+  }
+  .section-about .container article p {
+    font-size: 1rem;
+  }
+  .section-about .container article h3 {
+    font-size: 1.5rem;
+  }
+  .section-about .container article .container-img-about figure figcaption {
+    font-size: 1rem;
+  }
+  .section-about .container article a {
+    font-size: 0.8rem;
+  }
+
+  /* ********************** */
+  .section-portfolio .container {
+    flex-flow: column nowrap;
+  }
+  .section-portfolio .container .discription {
+    text-align: center;
+  }
+  .section-portfolio .container .discription h2 {
+    margin: 1.5rem 1.5rem 10px;
+  }
+  .section-portfolio .container .discription button {
+    margin: 0.5rem 30px 1.5rem;
+  }
+  .section-portfolio .container .set-of-works .battonSeeMore {
+    font-size: 0.8rem;
+  }
+
+  /* ******************** */
+  .section-application-fomr .container article button {
+    font-size: 0.8rem;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */
