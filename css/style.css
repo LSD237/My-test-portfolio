@@ -239,8 +239,8 @@ header .wrapperMobNav .navMobile:hover .ulMobile {
 .section-happy {
   max-width: 1600px;
   margin: 0 auto;
-  background-image: url(images/backgrounds/hands.jpg);
-  /* ? Почему-то перестал отображаться фон, в отладчике пишет, что файл не найден */
+  /* ( ../ ) такой синтаксис при задании пути решил проблему с отображением bg */
+  background-image: url(../images/backgrounds/hands.jpg);
   background-size: cover;
   background-position: center center;
 }

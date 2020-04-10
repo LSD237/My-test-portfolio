@@ -24,6 +24,7 @@
     styleDiv.color = '#F6F8F8';
 }) ();
 
+// анимация скрытия-раскрытия блока
 $("#sec").click(function() {
     $(this).slideUp(900);
 });
