@@ -1,0 +1,74 @@
+$colMain: #5995DD;
+$colMTwo: #1E3D6B;
+$colMThee: #2C5E9E;
+$colMFour: #ffc400;
+$colMFive: #D7DDE2;
+$colMSix: #6500a0;
+$colFont-light: #F6F8F8;
+$colFont-dark: #132b4f;
+$colButtonHover: #2EE59D;
+$colButtonBorderHover: #00ff0d;
+$colButtonShadow: rgba(46,229,157,.4);
+$colInputFocus: #004a92;
+$colFocus: #ff009c;
+$h2Large: 3rem;
+$h2Medium: 2.6rem;
+$h2Mob-Small: 2.1rem;
+$h3Large: 2.1rem;
+$h3Medium: 1.85rem;
+$h3MobMedium: 1.5rem;
+$h3Small: 1.2rem;
+$pLarge: 1.6rem;
+$pMedium: 1.3rem;
+$pSmall: 1rem;
+$pMob-Small: 0.8rem;
+
+@mixin button ($fS, $col, $colBg, $padd...){
+    display: inline-block;
+    text-decoration: none;
+    font-size: $fS;
+    color: $col;
+    background-color: $colBg;
+    padding: $padd;
+    @content;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+main {
+    background-color: $colMain;
+}
+.img-responsive {
+    display: inline-block;
+    max-width: 100%;
+}
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+h1, h2, h3, h4, h5, h6, p {
+    line-height: 1.4;
+}
+/* a11y подсветка фокуса */
+header a:focus,
+.section-home article a:focus,
+.section-about article a:focus,
+.section-happy .container a:focus,
+.section-portfolio .container .discription button:focus,
+.section-portfolio .container .set-of-works a:focus,
+.section-application-fomr .container article button:focus {
+    outline-color: $colFocus;
+}

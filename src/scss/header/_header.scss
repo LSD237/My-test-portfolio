@@ -1,0 +1,74 @@
+@import "color/color";
+header {
+    width: 100%;
+    background-color: $colMFive;
+    nav {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    img {
+        height: 50px;
+        border-radius: 5px;
+    }
+    li {
+        list-style-type: none;
+        display: inline-block;
+    }
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: $colMTwo;
+        font-size: $pLarge;
+        padding: 10px 20px;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        margin: 10px 0;
+        transition: .3s;
+        &:hover {
+            border: 2px solid $colMTwo;
+        }
+    }
+    // Выпадашка
+    .wrapperMobNav {
+        display: none;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        .navMobile {
+            display: none;
+            position: relative;
+            width: 50px;
+            .icon-menu {
+                font-size: 50px;
+                cursor: pointer;
+                transition: .3s;
+                &:hover {
+                    color: $colMSix;
+                }
+            }
+            .ulMobile {
+                display: none;
+                li {
+                    margin: 0 5px;
+                }
+            }
+            &:hover .ulMobile {  // ????????????????
+                position: absolute;
+                top: 60px;
+                right: 0;
+                z-index: 2;
+                display: flex;
+                flex-flow: column nowrap;
+                background-color: $colMFive;
+                border: 2px solid $colMTwo;
+                border-radius: 5px;
+            }
+
+        }
+    }
+}

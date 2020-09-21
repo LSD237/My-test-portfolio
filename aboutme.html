@@ -6,9 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Краткое описание тестовой страницы">
     <title>About me</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="build/css/style.min.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><img class="img-responsive" src="build/images/logo/purple-silk-tkan-shelk-skladki-purpur-fioletovyi-fon-texture.jpg" alt="icon"></li>
+                <li><a href="#home" rel="chapter">Home</a></li>
+                <li><a href="aboutme.html" rel="chapter">About</a></li>
+                <li><a href="#clients" rel="chapter">Clients</a></li>
+                <li><a href="MyWorks.html" rel="chapter">Portfolio</a></li>
+            </ul>
+        </nav>
+        <div class="wrapperMobNav">
+            <img class="img-responsive" src="build/images/logo/purple-silk-tkan-shelk-skladki-purpur-fioletovyi-fon-texture.jpg" alt="icons">
+            <!-- ? Нужен ли какой-нибудь атрибут для а11y (что бы в моб.версии был фокус на "меню-бургер", для выпадения меню) -->
+            <nav class="navMobile">
+                <svg class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg>
+                <ul class="ulMobile">
+                    <li><a href="#home" rel="chapter">Home</a></li>
+                    <li><a href="aboutme.html" rel="chapter">About</a></li>
+                    <li><a href="#clients" rel="chapter">Clients</a></li>
+                    <li><a href="MyWorks.html" rel="chapter">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main>
         <section class="top">
             <div class="container">
@@ -33,12 +57,12 @@
             <div class="container">
                 <h2>Живу в Калининграде</h2>
                 <p>Замечательный и уютный город, с красивой архетектурой и людьми</p>
-                <img src="images/caption.jpg" alt="Достопримечательность Калининграда">
-                <img src="images/dostoprimechatelnosti-kaliningrada 1.jpg" alt="Достопримечательность Калининграда">
-                <img src="images/Kaliningrad_05-2017_img32_Fighting_Wisents.jpg" alt="Достопримечательность Калининграда">
-                <img src="images/Korolevskie-vorota.jpg" alt="Достопримечательность Калининграда">
-                <img src="images/musiem.jpg" alt="Достопримечательность Калининграда">
-                <img src="images/Zdanie-birzhi.jpg" alt="Достопримечательность Калининграда">
+                <img src="build/images/caption.jpg" alt="Достопримечательность Калининграда">
+                <img src="build/images/dostoprimechatelnosti-kaliningrada 1.jpg" alt="Достопримечательность Калининграда">
+                <img src="build/images/Kaliningrad_05-2017_img32_Fighting_Wisents.jpg" alt="Достопримечательность Калининграда">
+                <img src="build/images/Korolevskie-vorota.jpg" alt="Достопримечательность Калининграда">
+                <img src="build/images/musiem.jpg" alt="Достопримечательность Калининграда">
+                <img src="build/images/Zdanie-birzhi.jpg" alt="Достопримечательность Калининграда">
             </div>
         </section>
         <section class="web-development">
@@ -58,20 +82,41 @@
             <div class="container">
                 <h2>Увлекаюсь спортивной деятельнстью различного рода</h2>
                 <figure>
-                    <img src="images/hobby/fitnes.jpg" alt="человек занимающийся фитнесом">
+                    <img src="build/images/hobby/fitnes.jpg" alt="человек занимающийся фитнесом">
                     <figcaption>Фитнес</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/hobby/box.jpg" alt="боец">
+                    <img src="build/images/hobby/box.jpg" alt="боец">
                     <figcaption>Бокс</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/hobby/voleibol.jpg" alt="воллейболисты, теннесисты">
-                    <img src="images/hobby/tennis.jpg" alt="воллейболисты, теннесисты">
+                    <img src="build/images/hobby/voleibol.jpg" alt="воллейболисты, теннесисты">
+                    <img src="build/images/hobby/tennis.jpg" alt="воллейболисты, теннесисты">
                     <figcaption>Игровые виды спорта</figcaption>
                 </figure>
             </div>
         </section>
     </main>
+    <footer>
+        <div class="container">
+            <div class="footer-column">
+                <img src="" alt="">
+                <h3>Contact</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut!</p>
+                <h3>Follow me on:</h3>
+                <a target="_blank" href="https://vk.com/id6725831" rel="me"><svg class="icon icon-vk"><use xlink:href="#icon-vk"></use></svg></a>
+            </div>
+            <div class="footer-column">
+                <h3>ХЗ</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, itaque!</p>
+            </div>
+            <div class="footer-column">
+                <h3>About MySelf</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil sint dicta 
+                ipsum quae unde dolores laboriosam voluptates vel repellat excepturi! Necessitatibus 
+                quos fugiat perspiciatis! At incidunt recusandae nobis animi. Placeat!</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
